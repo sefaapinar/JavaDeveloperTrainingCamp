@@ -2,6 +2,8 @@ package kodlama.io.rentACar.webApi.controllers;
 
 import java.util.List;
 
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,12 +18,15 @@ public class BrandsController {
 	
 	private BrandService brandService;
 
+	  //Git parametrelerine bak. +
 	public BrandsController(BrandService brandService) {
 		super();
 		this.brandService = brandService;
 	}
 	
+	@GetMapping("/getAll")
 	public List<Brand> getAll(){
+		//IoC Default gelir springbootta.
 		return brandService.getAll();
 	}
 	
