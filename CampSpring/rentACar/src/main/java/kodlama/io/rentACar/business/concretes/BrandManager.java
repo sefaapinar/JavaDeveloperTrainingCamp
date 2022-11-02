@@ -23,11 +23,11 @@ public class BrandManager implements BrandService{
 
 	@Override
 	public List<Brand> getAll() {
-		// İş kuralları buraya yazılır.
-		
-		
-		return brandRepository.getAll();
+		// TODO Auto-generated method stub
+		return brandRepository.findAll();
 	}
+
+
 
 	
 }
